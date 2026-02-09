@@ -1,11 +1,10 @@
 function typeWrite(elemento) {
     const textoOriginal = elemento.innerHTML;
-    elemento.innerHTML = ''; // Limpa antes de começar
+    elemento.innerHTML = ''; 
     
     const textoArray = textoOriginal.split('');
     
     textoArray.forEach((letra, i) => {
-        // Variação de tempo para parecer mais humano
         const delay = 70 * i + Math.random() * 40;
         
         setTimeout(() => {
@@ -14,7 +13,6 @@ function typeWrite(elemento) {
     });
 }
 
-// Inicia apenas quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
     const titulo = document.querySelector('#msg');
     if (titulo) {
